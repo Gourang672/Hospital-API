@@ -12,7 +12,8 @@ app.use(bodyParser.json());
 //using router
 app.use(router);
 //creating server
-app.listen(4000, () => {
+const PORT =process.env.PORT ||4000
+app.listen(PORT, () => {
     console.log('server listening on Url: ' +'http://localhost:4000');
     DB();
 });

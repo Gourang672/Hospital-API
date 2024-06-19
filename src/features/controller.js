@@ -1,6 +1,6 @@
 import Doctor from "./doctor.schema.js"; // Importing Doctor schema
 import Patient from "./patient.schema.js"; // Importing Patient schema
-import jwt from "jsonwebtoken"; // Importing JSON Web Token library
+
 
 export default class UserController {
   // Login doctor function
@@ -9,8 +9,6 @@ export default class UserController {
       // Finding doctor with the provided credentials
       const user = await Doctor.find(req.body);
       if (user) {
-        // Generating a JWT token if user is found
-        const token = jwt.sign(user.id, "%-EdqpI<nq^.1:N",{ expiresIn: '1h' });
       
       // Sending success response
       return res.status(200).json({
