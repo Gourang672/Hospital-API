@@ -10,3 +10,4 @@ tools used:node.js,
            mongoose
 
 To start project type:node index.js
+Deployment link:https://hospital-api-m8ui.onrender.com
